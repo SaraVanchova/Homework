@@ -29,9 +29,10 @@ while True:
         try:
             num1 = float(input("Enter first number: ")) #User enter first number
             num2 = float(input("Enter second number: ")) # User enter seconf number
-        except ValueError:
-            print("Invalid input. Only numbers allowed.")
-            continue
+            
+        except ValueError: #if not valid print massage
+            print("Invalid input. Only numbers allowed.") 
+            continue # continue to next iteration
 
         if choice == '1':
             print(num1, "+", num2, "=", add(num1, num2))
