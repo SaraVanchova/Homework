@@ -29,13 +29,12 @@ while True:
         try:
             num1 = float(input("Enter first number: ")) #User enter first number
             num2 = float(input("Enter second number: ")) # User enter seconf number
-            
         except ValueError: #if not valid print massage
-            print("Invalid input. Only numbers allowed.") 
+            print("Invalid input. Only numbers allowed.")
             continue # continue to next iteration
 
         if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+           print(num1, "+", num2, "=", add(num1, num2))
 
         elif choice == '2':
             print(num1, "-", num2, "=", subtract(num1, num2))
@@ -44,7 +43,17 @@ while True:
             print(num1, "*", num2, "=", multiply(num1, num2))
 
         elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
+            if num2 != 0: #check second number if not 0 print out the result
+                 print(num1, "/", num2, "=", divide(num1, num2))
+            
+            else: #if zero enter new number and print the result
+
+                print("Can not divide by zero") 
+                num2 = float(input("Enter second number again: "))
+                print(num1, "/", num2, "=", divide(num1, num2))
+
+               
+            
         
         
         
