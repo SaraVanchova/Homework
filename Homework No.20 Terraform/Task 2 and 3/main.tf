@@ -11,6 +11,10 @@ provider "azurerm" {
   # Configuration options
    features {}
 }
+locals { 
+  resource_prefix = "${var.my_name}${random_string.random.result}" 
+} 
+
 data "azurerm_subscription" "current" {
 
 }
@@ -21,7 +25,7 @@ resource "random_string" "random" {
      upper = false 
 } 
 resource "azurerm_resource_group" "example" {
-     name = "${var.my_name}-${random_string.random.result}-rg" 
+     name = "${local.resource_prefix}-rg" 
      location = var.location 
 } 
 resource "azurerm_storage_account" "example" { 
