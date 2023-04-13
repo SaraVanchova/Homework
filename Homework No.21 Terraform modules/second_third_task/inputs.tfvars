@@ -1,0 +1,5 @@
+my_name = "sara"
+environment = "test"
+location = "eastus"
+my_public_ip = "95.180.174.177"
+my_password = "adminuserpass!123"
