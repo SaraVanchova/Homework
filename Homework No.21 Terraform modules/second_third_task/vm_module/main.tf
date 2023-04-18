@@ -19,6 +19,7 @@ resource "azurerm_public_ip" "vm" {
     environment = "test"
   }
 }
+
 #Create network interface with following parametars
 resource "azurerm_network_interface" "vm" {
   name                = "${local.vm_name}-nic"

@@ -45,3 +45,6 @@ vms_subnet_id = azurerm_subnet.general_network_vms.id
 my_public_ip = var.my_public_ip
 my_password = var.my_password
 }
+output "vm_public_ip" {
+  value = module.vm.public_ip_address
+}
